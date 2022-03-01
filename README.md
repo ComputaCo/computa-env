@@ -1,5 +1,9 @@
 # computer_env
 
+:construction: **This repository is under construction.** :construction: Stable release coming this Summer 2022.
+
+Want to contribute? Check out the GitHub container repository [Limboid/the-artificial-ecosystem](https://github.com/Limboid/the-artificial-ecosystem) for this project.
+
 `computer_env` is a gym-style environment for developing machine learning agents that interact with a computer.
 
 ## The Problem
