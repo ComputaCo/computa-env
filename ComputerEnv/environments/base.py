@@ -35,7 +35,7 @@ class BaseComputerEnv:
     def step(self, action):
         self._apply_action(action)
         obs = self._get_observation()
-        return obs, 0, False, {}  # obs, reward, done, info
+        return obs, 0.0, False, {}  # obs, reward, done, info
 
     def render(self, mode='human'):
         raise NotImplementedError(
@@ -47,6 +47,7 @@ class BaseComputerEnv:
                 if modality.peripheral_type in [PeripheralType.OUTPUT, PeripheralType.BOTH]}
 
     def _apply_action(self, action):
-        return {modality.name: modality.apply_action(action)
-                for modality in self.modalities
-                if modality.peripheral_type in [PeripheralType.INPUT, PeripheralType.BOTH]}
+        for modality in self.modalities:
+            # this gracefully ignores missed keys
+            if modality.name in action and modality.peripheral_type in [PeripheralType.INPUT, PeripheralType.BOTH]:
+                modality.apply_action(action[modality.name])
