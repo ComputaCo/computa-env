@@ -14,7 +14,11 @@ Then, you can create a new environment:
 
 ```python
 from computer_env import LocalGUIEnv
+<<<<<<< HEAD
 env = LocalGUIEnv()
+=======
+env = LocalGUIEnv()  
+>>>>>>> d9f4883863ce60672e075a784f94e72269e05950
 # We also offer VNCGUIEnv, ChromeEnv, StdioEnv, and AndroidEnv
 ```
 
@@ -60,8 +64,13 @@ class TouchModality(ComputerModality):
       ...
       super().__init__(
           name='touch',
+<<<<<<< HEAD
           action_space=spaces.Discrete(2), # or None if not applicable
           observation_space=spaces.Box(low=0, high=1, shape=(2,), dtype=np.uint8), # or None if not applicable
+=======
+          action_space=gym.spaces.Discrete(2), # or None if not applicable
+          observation_space=gym.spaces.Box(low=0, high=1, shape=(2,), dtype=np.uint8), # or None if not applicable
+>>>>>>> d9f4883863ce60672e075a784f94e72269e05950
           device='mouse',
           device_args={'button': 1},
       )
@@ -99,8 +108,11 @@ print(VNCComputerEnv.action_modalities)
 ```
 
 ## TODO: STANDARD OPEN SOURCE REPO TEMPLATE README SECTIONS
+<<<<<<< HEAD
 
 
 ## Major TODO's
 
 - `num_fingers` shouldn't be a parameter. It should be a separate modality `Finger(screen)`. Likewise, using xinput for multiple cursors, you should be able to do `Mouse(screen)`, and a `supports_multimouse` environment will be able to respond intelligently. More generally, there should be a corresponding Environment protocol for all modalities: `supports_keyboard`, `supports_touch`, etc., and maybe there should be a `supports_X = make_protocol(modality_X)` meta-function.
+=======
+>>>>>>> d9f4883863ce60672e075a784f94e72269e05950
