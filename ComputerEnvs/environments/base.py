@@ -7,7 +7,6 @@ from ComputerEnvs.peripherals.base import PeripheralType
 
 
 class BaseComputerEnv:
-
     metadata = {"render.modes": ["human"]}
 
     def __init__(self, modalities):
@@ -30,7 +29,8 @@ class BaseComputerEnv:
             {
                 modality.name: modality.action_space
                 for modality in self.modalities
-                if modality.peripheral_type in [PeripheralType.INPUT, PeripheralType.BOTH]
+                if modality.peripheral_type
+                in [PeripheralType.INPUT, PeripheralType.BOTH]
             }
         )
 

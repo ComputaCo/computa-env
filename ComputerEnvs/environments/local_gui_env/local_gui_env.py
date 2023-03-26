@@ -11,7 +11,6 @@ from ComputerEnvs.environments.local_gui_env.soundtrack import Soundtrack
 
 
 class LocalGUIEnv(BaseComputerEnv):
-
     metadata = {"render.modes": ["human", "rgb_array"]}
 
     def __init__(

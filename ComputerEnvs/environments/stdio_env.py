@@ -9,7 +9,6 @@ from ComputerEnvs.peripherals.keyboard.constants import ASCII_128_KEYS
 
 
 class StdIOEnv(BaseComputerEnv):
-
     metadata = {"render.modes": ["human", "ansi"]}
 
     def __init__(
@@ -22,7 +21,6 @@ class StdIOEnv(BaseComputerEnv):
         cwd=None,
         env=None,
     ):
-
         # keyboard
         self.keyboard = Keyboard(
             press_key_fn=lambda key: None, release_key_fn=lambda key: None, keys=keys

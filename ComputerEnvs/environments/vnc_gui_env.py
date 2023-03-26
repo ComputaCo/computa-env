@@ -8,7 +8,6 @@ from ComputerEnvs.peripherals.keyboard.constants import ASCII_128_KEYS
 
 
 class VNCGUIEnv(BaseComputerEnv):
-
     metadata = {"render.modes": ["human", "rgb_array"]}
 
     def __init__(
