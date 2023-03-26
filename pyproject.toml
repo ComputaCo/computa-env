@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "computer-envs"
+version = "0.1.0"
+description = ""
+authors = ["Jacob Valdez <jacob.valdez@limboid.ai>"]
+readme = "README.md"
+packages = [{ include = "ComputerEnvs" }]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+mss = "^7.0.1"
+pynput = "^1.7.6"
+pyvnc = { git = "https://github.com/Limboid/pyVNC.git" }
+matplotlib = "^3.7.1"
+pyte = "^0.8.1"
+gymnasium = "^0.28.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
