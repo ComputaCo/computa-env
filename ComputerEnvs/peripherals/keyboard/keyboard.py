@@ -1,8 +1,8 @@
 import numpy as np
 from gymnasium import spaces
 
-from ..base import Peripheral, PeripheralType
-from .constants import STANDARD_ENGLISH_US_KEYBOARD_KEYS
+from ComputerEnvs.peripherals.base import Peripheral, PeripheralType
+from ComputerEnvs.peripherals.keyboard.constants import STANDARD_ENGLISH_US_KEYBOARD_KEYS
 
 
 class Keyboard(Peripheral):

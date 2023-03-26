@@ -1,7 +1,7 @@
 import numpy as np
 from gymnasium import spaces
 
-from .base import Peripheral, PeripheralType
+from ComputerEnvs.peripherals.base import Peripheral, PeripheralType
 
 
 class Display(Peripheral):

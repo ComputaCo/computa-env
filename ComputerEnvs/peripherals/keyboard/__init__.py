@@ -1,2 +1,2 @@
-from . import constants
-from .keyboard import Keyboard
+from ComputerEnvs.peripherals.keyboard.constants import *
+from ComputerEnvs.peripherals.keyboard import Keyboard

@@ -1,7 +1,7 @@
 import numpy as np
 from gymnasium import spaces
 
-from .base import Peripheral, PeripheralType
+from ComputerEnvs.peripherals.base import Peripheral, PeripheralType
 
 
 class Mouse(Peripheral):
@@ -12,8 +12,8 @@ class Mouse(Peripheral):
     }
     Action space: {
       'motion': (float, float),
-      'wheel_delta': float,
       'buttons': list[int]
+      'wheel'?: float,
     }
     """
 
@@ -45,8 +45,8 @@ class Mouse(Peripheral):
         self.action_space = spaces.Dict(
             {
                 "motion": spaces.Box(low=-np.inf, high=np.inf, shape=(2,)),
-                "wheel": spaces.Box(low=-np.inf, high=np.inf, shape=(1,)),
                 "buttons": spaces.MultiBinary(len(self.buttons)),
+                "wheel": spaces.Box(low=-np.inf, high=np.inf, shape=(1,)),
             }
         )
 
@@ -64,9 +64,9 @@ class Mouse(Peripheral):
 
     def apply_action(self, action):
         self.move_fn(action["motion"])
-        self.wheel_fn(action["wheel_delta"])
         button_diff = action["buttons"] - self._button_state
         # press = diff > 0
+        # no change = diff = 0
         # release = diff < 0
         for button, change in zip(self.buttons, button_diff):
             if change > 0:
@@ -75,3 +75,4 @@ class Mouse(Peripheral):
                 self.release_button_fn(button)
             else:
                 pass
+        self.wheel_fn(action["wheel"])

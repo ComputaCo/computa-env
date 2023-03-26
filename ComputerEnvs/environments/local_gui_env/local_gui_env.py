@@ -4,10 +4,10 @@ import matplotlib.pyplot as plt
 from pynput import keyboard as pynput_keyboard
 from pynput import mouse as pynput_mouse
 
-from ..base import BaseComputerEnv
-from ...peripherals import Keyboard, Mouse
-from .display import Display
-from .soundtrack import Soundtrack
+from ComputerEnvs.environments.base import BaseComputerEnv
+from ComputerEnvs.peripherals import Keyboard, Mouse
+from ComputerEnvs.environments.local_gui_env.display import Display
+from ComputerEnvs.environments.local_gui_env.soundtrack import Soundtrack
 
 
 class LocalGUIEnv(BaseComputerEnv):

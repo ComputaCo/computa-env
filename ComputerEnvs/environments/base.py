@@ -3,7 +3,7 @@ import numpy as np
 import gymnasium as gym
 from gymnasium import spaces
 
-from ..peripherals.base import PeripheralType
+from ComputerEnvs.peripherals.base import PeripheralType
 
 
 class BaseComputerEnv:

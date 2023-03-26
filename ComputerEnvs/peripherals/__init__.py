@@ -1,6 +1,6 @@
-from .base import Peripheral, PeripheralType
-from .mouse import Mouse
-from .keyboard import Keyboard
-from .display import Display
-from .soundtrack import Soundtrack
-from .terminal_display import TerminalDisplay
+from ComputerEnvs.peripherals.base import Peripheral, PeripheralType
+from ComputerEnvs.peripherals.mouse import Mouse
+from ComputerEnvs.peripherals.keyboard import Keyboard
+from ComputerEnvs.peripherals.display import Display
+from ComputerEnvs.peripherals.soundtrack import Soundtrack
+from ComputerEnvs.peripherals.terminal_display import TerminalDisplay

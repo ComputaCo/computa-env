@@ -2,9 +2,9 @@ import subprocess
 from typing import Optional
 import pyVNC
 
-from .base import BaseComputerEnv
-from ..peripherals import Keyboard, Mouse, Display
-from ..peripherals.keyboard.constants import ASCII_128_KEYS
+from ComputerEnvs.environments.base import BaseComputerEnv
+from ComputerEnvs.peripherals import Keyboard, Mouse, Display
+from ComputerEnvs.peripherals.keyboard.constants import ASCII_128_KEYS
 
 
 class VNCGUIEnv(BaseComputerEnv):

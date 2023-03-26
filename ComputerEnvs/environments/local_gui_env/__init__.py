@@ -1,3 +1,3 @@
-from .display import Display
-from .soundtrack import Soundtrack
-from .local_gui_env import LocalGUIEnv
+from ComputerEnvs.environments.local_gui_env.display import Display
+from ComputerEnvs.environments.local_gui_env.soundtrack import Soundtrack
+from ComputerEnvs.environments.local_gui_env.local_gui_env import LocalGUIEnv

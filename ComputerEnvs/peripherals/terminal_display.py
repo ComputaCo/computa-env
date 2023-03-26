@@ -2,7 +2,7 @@ import numpy as np
 from gymnasium import spaces
 import pyte
 
-from .base import Peripheral, PeripheralType
+from ComputerEnvs.peripherals.base import Peripheral, PeripheralType
 
 
 class TerminalDisplay(Peripheral):
