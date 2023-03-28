@@ -3,7 +3,7 @@ import numpy as np
 import gymnasium as gym
 from gymnasium import spaces
 
-from ComputerEnvs.peripherals.base import PeripheralType
+from ComputerEnv.peripherals.base import PeripheralType
 
 
 class BaseComputerEnv:
@@ -29,8 +29,7 @@ class BaseComputerEnv:
             {
                 modality.name: modality.action_space
                 for modality in self.modalities
-                if modality.peripheral_type
-                in [PeripheralType.INPUT, PeripheralType.BOTH]
+                if modality.peripheral_type in [PeripheralType.INPUT, PeripheralType.BOTH]
             }
         )
 

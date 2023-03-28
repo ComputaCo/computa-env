@@ -2,7 +2,7 @@ import numpy as np
 
 import mss
 
-from ComputerEnvs.peripherals import Display as AbstractDisplay
+from ComputerEnv.peripherals import Display as AbstractDisplay
 
 
 class Monitor(AbstractDisplay):

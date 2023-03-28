@@ -3,9 +3,9 @@ import pty
 import pyte
 import subprocess
 
-from ComputerEnvs.environments.base import BaseComputerEnv
-from ComputerEnvs.peripherals import Keyboard, TerminalDisplay
-from ComputerEnvs.peripherals.keyboard.constants import ASCII_128_KEYS
+from ComputerEnv.environments.base import BaseComputerEnv
+from ComputerEnv.peripherals import Keyboard, TerminalDisplay
+from ComputerEnv.peripherals.keyboard.constants import ASCII_128_KEYS
 
 
 class StdIOEnv(BaseComputerEnv):
