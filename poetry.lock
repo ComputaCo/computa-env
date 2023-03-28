@@ -1094,6 +1094,17 @@ cffi = "*"
 numpy = "*"
 
 [[package]]
+name = "tesserocr"
+version = "2.6.0"
+description = "A simple, Pillow-friendly, Python wrapper around tesseract-ocr API using Cython"
+category = "main"
+optional = false
+python-versions = "*"
+files = [
+    {file = "tesserocr-2.6.0.tar.gz", hash = "sha256:77430d272b53dacd3bdd4af5d563fdc24ae51b86fdbc9cf2e8146f29c7abc9a4"},
+]
+
+[[package]]
 name = "tomli"
 version = "2.0.1"
 description = "A lil' TOML parser"
@@ -1241,4 +1252,4 @@ testing = ["coverage (>=5.0.3)", "zope.event", "zope.testing"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "37086ebdf4eef9dc79a2f0f286e0258c8453aa399313bb6a1b48d9a67b1ee361"
+content-hash = "bf58e158d4f2ab6f0319740d38d5013ae41f6ce8047936f8e939d409f40c9320"

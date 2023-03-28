@@ -1,3 +1,5 @@
+from typing import Callable
+import attr
 import numpy as np
 from gymnasium import spaces
 
@@ -5,9 +7,9 @@ from ComputerEnvs.peripherals.base import Peripheral, PeripheralType
 
 
 class Display(Peripheral):
-    def __init__(self, screenshot_fn, name="display"):
-        super.__init__(modality_type=PeripheralType.OUTPUT, name=name)
-        self.screenshot_fn = screenshot_fn
+    name: str = attr.ib(default="display")
+    screenshot_fn: Callable[[], np.ndarray] = attr.ib()
+    modality_type: PeripheralType = attr.ib(default=PeripheralType.OUTPUT)
 
     @property
     def observation_space(self):

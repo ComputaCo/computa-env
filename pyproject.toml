@@ -15,6 +15,8 @@ matplotlib = "^3.7.1"
 pyte = "^0.8.1"
 gymnasium = "^0.28.1"
 soundcard = "^0.4.2"
+tesserocr = "^2.6.0"
+pillow = "^9.4.0"
 
 
 [tool.poetry.group.dev.dependencies]
