@@ -2,12 +2,12 @@ import subprocess
 from typing import Optional
 import pyVNC
 
-from ComputerEnv.environments.base import BaseComputerEnv
-from ComputerEnv.peripherals import Keyboard, Mouse, Display
-from ComputerEnv.peripherals.keyboard.constants import ASCII_128_KEYS
+from ComputaEnv.environments.base import BaseComputaEnv
+from ComputaEnv.peripherals import Keyboard, Mouse, Display
+from ComputaEnv.peripherals.keyboard.constants import ASCII_128_KEYS
 
 
-class VNCGUIEnv(BaseComputerEnv):
+class VNCGUIEnv(BaseComputaEnv):
     metadata = {"render.modes": ["human", "rgb_array"]}
 
     def __init__(

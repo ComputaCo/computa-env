@@ -1,10 +1,10 @@
 [tool.poetry]
-name = "computer-envs"
+name = "computa-env"
 version = "0.1.0"
 description = ""
 authors = ["Jacob Valdez <jacob.valdez@limboid.ai>"]
 readme = "README.md"
-packages = [{ include = "ComputerEnv" }]
+packages = [{ include = "ComputaEnv" }]
 
 [tool.poetry.dependencies]
 python = "^3.10"

@@ -1,6 +1,6 @@
 import numpy as np
 import soundcard as sc
-from ComputerEnv.peripherals import Soundtrack as AbstractSoundtrack
+from ComputaEnv.peripherals import Soundtrack as AbstractSoundtrack
 
 
 class Soundtrack(AbstractSoundtrack):

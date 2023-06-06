@@ -1,12 +1,12 @@
-:warning: ComputerEnv is not working yet. It is still in the design phase. Please see https://github.com/ComputaCo/computer-env/issues/1 :warning:
+:warning: ComputaEnv is not working yet. It is still in the design phase. Please see https://github.com/ComputaCo/computer-env/issues/1 :warning:
 
-# computer_env
+# computa_env
 
-`computer_env` is a gym-style environment for developing machine learning agents that interact with a computer.
+`computa_env` is a gym-style environment for developing machine learning agents that interact with a computer.
 
 ## Getting Started
 
-First, you'll need to install `computer_env`:
+First, you'll need to install `computa_env`:
 
 ```bash
 pip install computer-env  # not available yet
@@ -15,7 +15,7 @@ pip install computer-env  # not available yet
 Then, you can create a new environment:
 
 ```python
-from computer_env import LocalGUIEnv
+from computa_env import LocalGUIEnv
 env = LocalGUIEnv()
 # We also offer VNCGUIEnv, ChromeEnv, StdioEnv, and AndroidEnv
 ```
@@ -50,12 +50,12 @@ while True:
 
 The action sent in the `step(action)` method is merely a request for the computer to execute that action. Other processes may be controlling the keyboard, mouse, audio, and other devices. This means you, other agents, or bots may be able to simultaneously operate on the same computer, but it also means the agent could be 'surprised' by the computer's behavior. For example, the `release_key` action might not always result in a `key_pressed` observation if another user is still holding the key down.
 
-ComputerEnv modalities are passed in at initialization time. Subclasses like `LocalComputerEnv` and `VNCComputerEnv` provide convenience initialization for several standard modalities. However, you can easily introduce you own modalities by subclassing the `ComputerModality` class:
+ComputaEnv modalities are passed in at initialization time. Subclasses like `LocalComputaEnv` and `VNCComputaEnv` provide convenience initialization for several standard modalities. However, you can easily introduce you own modalities by subclassing the `ComputerModality` class:
 
 ```python
 # TODO make this example work
 
-from computer_env import ComputerEnv, ComputerModality, LocalComputerEnv
+from computa_env import ComputaEnv, ComputerModality, LocalComputaEnv
 
 class TouchModality(ComputerModality):
     def __init__(self, num_fingers = 2, screen_size: Tuple[int, int]):
@@ -82,26 +82,26 @@ class TouchModality(ComputerModality):
       # not needed if TouchModality were an observation-only modality
       ...
 
-env = ComputerEnv(modalities=LocalComputerEnv.modalities + [MyModality()])
+env = ComputaEnv(modalities=LocalComputaEnv.modalities + [MyModality()])
 ```
 
 ## Standard Modalities
 
 ```python
-from computer_env import LocalComputerEnv
-print(LocalComputerEnv.observation_modalities)
+from computa_env import LocalComputaEnv
+print(LocalComputaEnv.observation_modalities)
 # TODO
-print(LocalComputerEnv.action_modalities)
+print(LocalComputaEnv.action_modalities)
 # TODO
 ```
 
 # TODO list all standard modalities
 
 ```python
-from computer_env import VNCComputerEnv
-print(VNCComputerEnv.observation_modalities)
+from computa_env import VNCComputaEnv
+print(VNCComputaEnv.observation_modalities)
 # TODO
-print(VNCComputerEnv.action_modalities)
+print(VNCComputaEnv.action_modalities)
 # TODO
 ```
 

@@ -3,10 +3,10 @@ import numpy as np
 import gymnasium as gym
 from gymnasium import spaces
 
-from ComputerEnv.peripherals.base import PeripheralType
+from ComputaEnv.peripherals.base import PeripheralType
 
 
-class BaseComputerEnv:
+class BaseComputaEnv:
     metadata = {"render.modes": ["human"]}
 
     def __init__(self, modalities):

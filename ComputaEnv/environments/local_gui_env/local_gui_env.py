@@ -4,13 +4,13 @@ import matplotlib.pyplot as plt
 from pynput import keyboard as pynput_keyboard
 from pynput import mouse as pynput_mouse
 
-from ComputerEnv.environments.base import BaseComputerEnv
-from ComputerEnv.peripherals import Keyboard, Mouse
-from ComputerEnv.environments.local_gui_env.display import Display
-from ComputerEnv.environments.local_gui_env.soundtrack import Soundtrack
+from ComputaEnv.environments.base import BaseComputaEnv
+from ComputaEnv.peripherals import Keyboard, Mouse
+from ComputaEnv.environments.local_gui_env.display import Display
+from ComputaEnv.environments.local_gui_env.soundtrack import Soundtrack
 
 
-class LocalGUIEnv(BaseComputerEnv):
+class LocalGUIEnv(BaseComputaEnv):
     metadata = {"render.modes": ["human", "rgb_array"]}
 
     def __init__(

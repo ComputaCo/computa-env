@@ -1,7 +1,7 @@
 import numpy as np
 from gymnasium import spaces
 
-from ComputerEnv.peripherals.base import Peripheral, PeripheralType
+from ComputaEnv.peripherals.base import Peripheral, PeripheralType
 
 
 class Mouse(Peripheral):

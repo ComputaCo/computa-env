@@ -3,12 +3,12 @@ import pty
 import pyte
 import subprocess
 
-from ComputerEnv.environments.base import BaseComputerEnv
-from ComputerEnv.peripherals import Keyboard, TerminalDisplay
-from ComputerEnv.peripherals.keyboard.constants import ASCII_128_KEYS
+from ComputaEnv.environments.base import BaseComputaEnv
+from ComputaEnv.peripherals import Keyboard, TerminalDisplay
+from ComputaEnv.peripherals.keyboard.constants import ASCII_128_KEYS
 
 
-class StdIOEnv(BaseComputerEnv):
+class StdIOEnv(BaseComputaEnv):
     metadata = {"render.modes": ["human", "ansi"]}
 
     def __init__(
