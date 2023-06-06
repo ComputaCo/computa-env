@@ -112,7 +112,7 @@ class VNCGUIEnv(BaseComputerEnv):
             "/path/to/password/file" if vnc_password else "",
         ]
 
-        _vnc_server_proc = subprocess.Popen(command)
+        self._vnc_server_proc = subprocess.Popen(command)
 
         vnc_host = "localhost"
         vnc_port = 5900 + display_num
@@ -120,7 +120,7 @@ class VNCGUIEnv(BaseComputerEnv):
         return vnc_host, vnc_port, vnc_password
 
     def close_vnc_server():
-        global _vnc_server_proc
+        global self._vnc_server_proc
         if _vnc_server_proc:
             _vnc_server_proc.terminate()
             _vnc_server_proc.wait()

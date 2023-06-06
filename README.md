@@ -1,3 +1,5 @@
+:warning: ComputerEnv is not working yet. It is still in the design phase. Please see https://github.com/ComputaCo/computer-env/issues/1 :warning:
+
 # computer_env
 
 `computer_env` is a gym-style environment for developing machine learning agents that interact with a computer.
@@ -14,11 +16,7 @@ Then, you can create a new environment:
 
 ```python
 from computer_env import LocalGUIEnv
-<<<<<<< HEAD
 env = LocalGUIEnv()
-=======
-env = LocalGUIEnv()  
->>>>>>> d9f4883863ce60672e075a784f94e72269e05950
 # We also offer VNCGUIEnv, ChromeEnv, StdioEnv, and AndroidEnv
 ```
 
